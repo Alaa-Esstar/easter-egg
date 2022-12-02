@@ -29,12 +29,13 @@
     />
     <!-- owl stylesheets -->
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen"
     />
+    <script src="eggjs/eggjs.js"></script>
     <style>
       #s2 {
         margin-left: 50px;
@@ -60,7 +61,7 @@
                   <a class="nav-link" href="#main_slider">Home</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#about_section">What's HIV</a>
+                  <a  class="nav-link" href="#about_section">What's HIV</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="#symptoms_section">Symptoms</a>
@@ -94,7 +95,7 @@
                         </div>
                         <div class="col-md-6">
                            <!-- <div class="image_1"><img src="images/img-1.png"></div> -->
-                           <div class="image_1"><img style="height:300px ;" src="images/bg.png"></div>
+                           <div  class="image_1"><img style="height:300px ;" src="images/bg.png"></div>
                         </div>
                      </div>
                   </div>
@@ -139,8 +140,10 @@
           Immune Deficiency Syndrome).
         </p>
         <div class="health_section layout_padding">
-          <div class="row">
+          <div class="row" style="cursor: pointer" onclick='easterEggConsole()'>
             <lottie-player
+            
+            
               src="https://assets1.lottiefiles.com/packages/lf20_ogsbbjhs.json"
               background="transparent"
               speed="1"
@@ -457,7 +460,7 @@
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/custom.js"></script>
     <!-- javascript -->
-    <script src="js/owl.carousel.js"></script>
+   
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
