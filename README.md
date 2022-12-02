@@ -1,6 +1,6 @@
 # easter-egg
 
-# pour teleca=harger le dossier
+# pour telecharger le dossier
 git clone https://github.com/digostaaa/easter-egg.git
 
 # ouvrir le fichier index.html
