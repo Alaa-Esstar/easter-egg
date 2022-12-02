@@ -20,16 +20,9 @@
    <!-- Responsive-->
    <link rel="stylesheet" href="css/responsive.css">
    <!-- fevicon -->
-   <link rel="icon" href="images/fevicon.png" type="image/gif" />
-   <!-- Scrollbar Custom CSS -->
-   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
    <!-- Tweaks for older IEs-->
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    <!-- owl stylesheets -->
-   <link rel="stylesheet" href="css/owl.carousel.min.css">
-   <link rel="stylesheet" href="css/owl.theme.default.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-      media="screen">
    <style>
       #s2 {
          margin-left: 50px;
@@ -47,7 +40,7 @@
    <!-- header section start -->
    <div class="header_section">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-         <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+         <div class="logo"><a href="index.html"><img src="images/logo2.png" style="width: 100px;"><span style="margin-left: -10px">yes</span></a></div>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -137,7 +130,7 @@
             has a very hard time fighting diseases. HIV causes AIDS (Acquired
             Immune Deficiency Syndrome).</p>
          <div class="health_section layout_padding">
-            <div class="row">
+            <div class="row" style="cursor: pointer" onclick='easterEggConsole()'>
                <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_ogsbbjhs.json" background="transparent"
                   speed="1" style="width: 150; height: 300px" loop autoplay>
                </lottie-player>
@@ -368,9 +361,12 @@
                      <h1 class="book_text">Newsletter</h1>
                      <input type="text" class="Email_text" placeholder="Email" name="Email">
                      <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                     <div class="send_bt"><a href="#">SEND</a></div>
+                     <div class="send_bt" onclick="egger()"><a href="#">SEND</a></div>
                   </div>
                </div>
+            </div>
+            <div class="row">
+               <div class="col-12" id="selecim"></div>
             </div>
          </div>
       </div>
@@ -390,14 +386,37 @@
    <script src="js/popper.min.js"></script>
    <script src="js/bootstrap.bundle.min.js"></script>
    <script src="js/jquery-3.0.0.min.js"></script>
-   <script src="js/plugin.js"></script>
    <!-- sidebar -->
    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-   <script src="js/custom.js"></script>
    <!-- javascript -->
-   <script src="js/owl.carousel.js"></script>
    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+   <script src="js/custom2.js"></script>
+
+   <!-- 
+   
+██╗░░░██╗░█████╗░██╗░░░██╗  ███████╗██╗░░██╗██████╗░███████╗░█████╗░████████╗███████╗██████╗░  ░█████╗░███╗░░██╗
+╚██╗░██╔╝██╔══██╗██║░░░██║  ██╔════╝╚██╗██╔╝██╔══██╗██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗  ██╔══██╗████╗░██║
+░╚████╔╝░██║░░██║██║░░░██║  █████╗░░░╚███╔╝░██████╔╝█████╗░░██║░░╚═╝░░░██║░░░█████╗░░██║░░██║  ███████║██╔██╗██║
+░░╚██╔╝░░██║░░██║██║░░░██║  ██╔══╝░░░██╔██╗░██╔═══╝░██╔══╝░░██║░░██╗░░░██║░░░██╔══╝░░██║░░██║  ██╔══██║██║╚████║
+░░░██║░░░╚█████╔╝╚██████╔╝  ███████╗██╔╝╚██╗██║░░░░░███████╗╚█████╔╝░░░██║░░░███████╗██████╔╝  ██║░░██║██║░╚███║
+░░░╚═╝░░░░╚════╝░░╚═════╝░  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚══════╝░╚════╝░░░░╚═╝░░░╚══════╝╚═════╝░  ╚═╝░░╚═╝╚═╝░░╚══╝
+███████╗░█████╗░░██████╗████████╗███████╗██████╗░  ███████╗░██████╗░░██████╗░  ██████╗░██╗░░░██╗████████╗
+██╔════╝██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗  ██╔════╝██╔════╝░██╔════╝░  ██╔══██╗██║░░░██║╚══██╔══╝
+█████╗░░███████║╚█████╗░░░░██║░░░█████╗░░██████╔╝  █████╗░░██║░░██╗░██║░░██╗░  ██████╦╝██║░░░██║░░░██║░░░
+██╔══╝░░██╔══██║░╚═══██╗░░░██║░░░██╔══╝░░██╔══██╗  ██╔══╝░░██║░░╚██╗██║░░╚██╗  ██╔══██╗██║░░░██║░░░██║░░░
+███████╗██║░░██║██████╔╝░░░██║░░░███████╗██║░░██║  ███████╗╚██████╔╝╚██████╔╝  ██████╦╝╚██████╔╝░░░██║░░░
+╚══════╝╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝  ╚══════╝░╚═════╝░░╚═════╝░  ╚═════╝░░╚═════╝░░░░╚═╝░░░
+██╗████████╗  ░██╗░░░░░░░██╗░█████╗░░██████╗  ███╗░░░███╗███████╗  ██████╗░██╗░█████╗░
+██║╚══██╔══╝  ░██║░░██╗░░██║██╔══██╗██╔════╝  ████╗░████║██╔════╝  ██╔══██╗██║██╔══██╗
+██║░░░██║░░░  ░╚██╗████╗██╔╝███████║╚█████╗░  ██╔████╔██║█████╗░░  ██║░░██║██║██║░░██║
+██║░░░██║░░░  ░░████╔═████║░██╔══██║░╚═══██╗  ██║╚██╔╝██║██╔══╝░░  ██║░░██║██║██║░░██║
+██║░░░██║░░░  ░░╚██╔╝░╚██╔╝░██║░░██║██████╔╝  ██║░╚═╝░██║███████╗  ██████╔╝██║╚█████╔╝
+╚═╝░░░╚═╝░░░  ░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚═════╝░  ╚═╝░░░░░╚═╝╚══════╝  ╚═════╝░╚═╝░╚════╝░
+█▄░█ █▀█ ▀█▀ █░█ █ █▄░█ █▀▀   ▀█▀ █▀█   █▀ █▀▀ █▀▀   █░█ █▀▀ █▀█ █▀▀ (̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄ (̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄(̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)
+█░▀█ █▄█ ░█░ █▀█ █ █░▀█ █▄█   ░█░ █▄█   ▄█ ██▄ ██▄   █▀█ ██▄ █▀▄ ██▄ 
+-->
 </body>
 
 </html>
