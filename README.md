@@ -18,3 +18,6 @@ Si on sélectionne un text définit une action va se produire 'Transmission', 't
 up up down down left right left right b a
 
 ## Console Log message quand on clique sur le gif du virus
+
+##Redirection vers la série "Sex Education " de Netflix
+Si on écrit sex education dans message de NewsLetter et on submit, une redirection vers la série sera effectué
